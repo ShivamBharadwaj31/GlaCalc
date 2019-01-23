@@ -11,8 +11,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
+        android:layout_marginBottom="65dp"
         android:ems="10"
         android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/et_second"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,20 +23,68 @@
         android:id="@+id/et_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
+        android:layout_marginBottom="103dp"
         android:ems="10"
         android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add"
         app:layout_constraintStart_toStartOf="@+id/et_first"
         app:layout_constraintTop_toBottomOf="@+id/et_first" />
 
     <Button
-        android:id="@+id/btn_calc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="256dp"
-        android:text="Calculate"
+        android:id="@+id/btn_add"
+        android:layout_width="126dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="55dp"
+        android:text="Add"
+        app:layout_constraintBottom_toTopOf="@+id/btn_substract"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_second" />
+
+    <Button
+        android:id="@+id/btn_substract"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="22dp"
+        android:text="Substract"
+        app:layout_constraintBottom_toTopOf="@+id/btn_multiply"
+        app:layout_constraintEnd_toEndOf="@+id/btn_multiply"
+        app:layout_constraintStart_toStartOf="@+id/btn_add"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add" />
+
+    <Button
+        android:id="@+id/btn_multiply"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="30dp"
+        android:text="Multiply"
+        app:layout_constraintBottom_toTopOf="@+id/btn_devide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_substract" />
+
+    <Button
+        android:id="@+id/btn_devide"
+        android:layout_width="122dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:text="Devide"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_multiply" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="63dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_devide" />
 </android.support.constraint.ConstraintLayout>
